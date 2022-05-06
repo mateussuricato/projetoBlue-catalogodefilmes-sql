@@ -7,4 +7,4 @@ routers.get("/", getIndex);
 
 routers.get("/cadastro", cadastro);
 
-routers.post("/create", postar);
+routers.post("/cadastro", postar);

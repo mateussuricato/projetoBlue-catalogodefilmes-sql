@@ -1,3 +1,4 @@
+import express from "express";
 import { Filmes } from "../model/filmes.js";
 
 export const getIndex = async (req, res) => {
@@ -19,12 +20,11 @@ export const cadastro = (req, res) => {
 
 export const postar = async (req, res) => {
   try {
-    const filme = req.body;
-
-
-    await Filmes.create(filme);
+    const teste = req.body;
+    console.log(teste);
+    await Filmes.create(teste);
     res.redirect("/");
-  } catch (error) {
-    res.send(error.message);
+  } catch (err) {
+    res.status(500).send({ err: err.message });
   }
 };

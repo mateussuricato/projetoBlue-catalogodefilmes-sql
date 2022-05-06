@@ -6,9 +6,9 @@ export const Filmes = connection.define(
   {
     id: {
       type: Sequelize.INTEGER,
+      autoIncrement: true,
       allowNull: false,
       primaryKey: true,
-      autoIncrement: true,
     },
     nome: {
       type: Sequelize.STRING,
