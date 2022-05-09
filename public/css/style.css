@@ -64,8 +64,13 @@ header ul a {
     font-size: 25px;
 }
 
+.banner img {
+    margin-top: 58px;
+    width: 100%;
+}
+
 h1 {
-    margin-top: 30px;
+    margin-top: 80px;
     text-align: center;
     color: white;
 }
@@ -164,5 +169,9 @@ footer {
 footer p {
     font-weight: 300;
     margin: auto;
+    color: white;
+}
+
+footer p a {
     color: white;
 }
