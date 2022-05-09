@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="/css/style.css">
     <title>Cadastro</title>
 </head>
@@ -12,26 +13,52 @@
 
     <main>
         <section class="cadastro">
+            <h1>Cadastro</h1>
             <div>
-                <form action="/cadastro" method="post">
+                <form action="/create" method="post">
                     <label for="nome">Nome:</label>
-                    <input type="text" id="nome" name="nome" >
+                    <input type="text" id="nome" class="teste" name="nome" required>
+
                     <label for="diretor">Diretor:</label>
-                    <input type="text" id="diretor" name="diretor" >
+                    <input type="text" id="diretor" class="teste" name="diretor" required>
+
                     <label for="img">Link da Imagem: </label>
-                    <input type="url" name="img" id="img" >
+                    <input type="url" class="teste" name="img" id="img" required>
+
                     <label for="duracao">Duração:</label>
-                    <input type="number" name="duracao" id="duracao" >
+                    <input type="number" class="teste" name="duracao" id="duracao" required>
+
                     <label for="anos">Ano:</label>
-                    <input type="text" id="anos" name="anos" >
+                    <input type="text" id="anos" class="teste" name="anos" required>
+
                     <label for="iframe">Iframe do Video:</label>
-                    <input type="text" id="iframe" name="iframe" >
-                    <button id="btnCadastrar" type="submit">Cadastrar</button>
+                    <input type="text" id="iframe" class="teste" name="iframe" required>
+
+                    <div class="btnContainer">
+                        <button id="btnCadastrar" value="0" type="submit">Cadastrar</button>
+                    </div>
                 </form>
             </div>
         </section>
     </main>
 
         <%- include('./partials/footer.ejs') %> 
+
+    <script>
+        const form = document.querySelector('form')
+        form.addEventListener("submit", () => {
+            Swal.fire({
+            icon: 'success',
+            title: 'SUCESSO!!!',
+            text: 'Filme adicionado',
+            text: 'em 5 segudos você voltará para página inicial e lá estará seu filme!',
+            timer: 5000,
+            timerProgressBar: true,
+            showConfirmButton: false
+            })
+        setInterval(() => {
+            window.location.href='/' }, 5000); 
+})
+    </script>
 </body>
 </html>

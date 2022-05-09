@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Editar</title>
+</head>
+<body>
+    <%- include('./partials/header.ejs') %> 
+
+    <main>
+        <h1>Editando o Filme <%= filmesAtual.nome %> </h1>
+        <section class="cadastro">
+            <div>
+                <form action="/editar/<%= filmesAtual.id %> " method="post">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" value="<%= filmesAtual.nome %> ">
+
+                    <label for="diretor">Diretor:</label>
+                    <input type="text" id="diretor" name="diretor" value="<%= filmesAtual.diretor %> ">
+
+                    <label for="img">Link da Imagem: </label>
+                    <input type="url" name="img" id="img" value="<%= filmesAtual.img %> ">
+
+                    <label for="duracao">Duração:</label>
+                    <input type="text" name="duracao" id="duracao" value="<%= filmesAtual.duracao %> ">
+
+                    <label for="anos">Ano:</label>
+                    <input type="text" id="anos" name="anos" value="<%= filmesAtual.anos %> ">
+
+                    <label for="iframe">Iframe do Video:</label>
+                    <input type="text" id="iframe" name="iframe" value="<%= filmesAtual.iframe %> ">
+
+                    <div class="btnContainer">
+                        <button id="btnCadastrar" type="submit">Editar</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+        <%- include('./partials/footer.ejs') %> 
+
+        <script>
+            const form = document.querySelector('form')
+            form.addEventListener("submit", () => {
+                Swal.fire({
+                icon: 'success',
+                title: 'SUCESSO!!!',
+                text: 'Filme editado',
+                text: 'em 5 segudos você voltará para página inicial',
+                timer: 5000,
+                timerProgressBar: true,
+                showConfirmButton: false
+                })
+            setInterval(() => {
+                window.location.href='/' }, 5000); 
+    })
+        </script>
+
+</body>
+</html>

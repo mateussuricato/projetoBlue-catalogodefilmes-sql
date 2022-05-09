@@ -10,8 +10,38 @@ body {
     background-color: rgb(0, 0, 0)
 }
 
+.container {
+    padding: 20px;
+    margin: 0 auto 0 auto;
+    text-align: center;
+    max-width: 700px;
+}
+
+iframe {
+    width: 100%;
+}
+
+.iframe {
+    margin-bottom: 30px;
+}
+
+table {
+    margin: auto;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+
+table tr:nth-child(odd) {
+    background-color: rgb(82, 1, 1);
+}
+
+table th {
+    background-color: rgb(172, 84, 84);
+}
+
 header ul {
-    background-color: #010326;
+    background-color: rgb(82, 1, 1);
     display: flex;
     height: 60px;
     align-items: center;
@@ -20,12 +50,18 @@ header ul {
 header ul a {
     font-weight: 900;
     text-decoration: none;
-    color: #eaf205;
+    color: rgb(253, 180, 180);
     text-transform: uppercase;
     font-style: normal;
     list-style: none;
     margin-left: 15px;
     font-size: 25px;
+}
+
+h1 {
+    margin-top: 30px;
+    text-align: center;
+    color: white;
 }
 
 .cards {
@@ -34,6 +70,10 @@ header ul a {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+.cards a {
+    text-decoration: none;
 }
 
 .card {
@@ -51,6 +91,7 @@ header ul a {
     font-size: 20px;
     font-weight: 300;
     margin-bottom: 10px;
+    max-width: 150px;
 }
 
 .card p {
@@ -58,8 +99,17 @@ header ul a {
 }
 
 .card img {
-    width: 100%;
-    max-height: 250px;
+    max-height: 200px;
+}
+
+.btn {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.btn a {
+    color: white;
 }
 
 .cadastro {
@@ -80,11 +130,29 @@ header ul a {
     height: 30px;
 }
 
+.btnContainer {
+    text-align: center;
+}
+
+#btnCadastrar {
+    margin-top: 30px;
+    width: 300px;
+    height: 50px;
+    background-color: rgb(104, 3, 3);
+    color: white;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 30px;
+    cursor: pointer;
+    border-radius: 30px;
+}
+
 footer {
     display: flex;
+    position: absolute;
     width: 100%;
     bottom: 0;
-    background-color: #010326;
+    background-color: rgb(82, 1, 1);
     height: 40px;
     align-items: center;
 }

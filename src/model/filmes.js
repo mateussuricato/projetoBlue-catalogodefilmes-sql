@@ -42,3 +42,9 @@ export const Filmes = connection.define(
     timestamps: false,
   }
 );
+
+function initTable() {
+  Filmes.async();
+}
+
+initTable();
