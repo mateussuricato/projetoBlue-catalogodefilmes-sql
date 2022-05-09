@@ -14,5 +14,6 @@ Ferramentas usadas:
 <img src="https://img.icons8.com/color/48/000000/html-5--v2.png"/>
 <img src="https://img.icons8.com/color/48/000000/css3.png"/>
 <img src="https://img.icons8.com/color/48/000000/nodejs.png"/>
-<img src="https://img.icons8.com/external-flat-juicy-fish/344/external-sql-coding-and-development-flat-flat-juicy-fish.png"/>
+<img src="https://uploaddeimagens.com.br/imagens/1r08BDY"/>
+<img src="https://uploaddeimagens.com.br/imagens/ujyPMJ8"/>
 </div>
