@@ -43,8 +43,8 @@ export const Filmes = connection.define(
   }
 );
 
-function initTable() {
-  Filmes.async();
-}
+const initTable = async () => {
+  await Filmes.sync();
+};
 
 initTable();
