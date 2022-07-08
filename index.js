@@ -6,7 +6,7 @@ import dotenv from 'dotenv'
 dotenv.config()
 
 const app = express();
-const port = 3333;
+const port = process.env.PORT || 3334;
 let __dirname = path.resolve(path.dirname(''))
 
 app.use(express.urlencoded({ extended: true }))
