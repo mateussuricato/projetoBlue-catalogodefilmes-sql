@@ -1,5 +1,5 @@
 # projetoBlue-catalogodefilmes-sql
- primeiro projeto usando banco de dados
+Projeto usando banco de dados postgres, backend e frontend no mesmo projeto.
 
 Esse foi o projeto final, realizado para o curso da Blue EdTech módulo II.
 
