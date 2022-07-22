@@ -1,43 +1,46 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
     <title><%= filmesDetalhes.nome %> - detalhes</title>
-    <link rel="shortcut icon" href="http://www.digi2.com.br/wp-content/uploads/2014/10/icon_filmespublicitarios-1.png" type="image/x-icon">
-</head>
+    <link
+      rel="shortcut icon"
+      href="http://www.digi2.com.br/wp-content/uploads/2014/10/icon_filmespublicitarios-1.png"
+      type="image/x-icon"
+    />
+  </head>
+  <%- include('./partials/header.ejs') %>
 
-    <main>
-        <section class="container">
-            <h1>Título: <%= filmesDetalhes.nome %> </h1>
-            <div class="iframe">
-                <iframe <%= filmesDetalhes.iframe %>> </iframe>
-            </div>
-            <table>
-                <thead>
-                    <th colspan="2">Detalhes</th>
-                </thead>
-                <table>
-                    <tr>
-                        <td>Diretor</td>
-                        <td><%= filmesDetalhes.diretor %></td>
-                    </tr>
-                    <tr>
-                        <td>Duração</td>
-                        <td> <%= filmesDetalhes.duracao %> minutos</td>
-                    </tr>
-                    <tr>
-                        <td>Lançamento</td>
-                        <td><%= filmesDetalhes.anos %></td>
-                    </tr>
-                </table>
-            </table>
-        </section>
-    </main>
+  <main>
+    <section class="container">
+      <h1>Título: <%= filmesDetalhes.nome %></h1>
+      <div class="iframe">
+        <iframe <%="filmesDetalhes.iframe" %>> </iframe>
+      </div>
+      <table>
+        <thead>
+          <th colspan="2">Detalhes</th>
+        </thead>
+        <table>
+          <tr>
+            <td>Diretor</td>
+            <td><%= filmesDetalhes.diretor %></td>
+          </tr>
+          <tr>
+            <td>Duração</td>
+            <td><%= filmesDetalhes.duracao %> minutos</td>
+          </tr>
+          <tr>
+            <td>Lançamento</td>
+            <td><%= filmesDetalhes.anos %></td>
+          </tr>
+        </table>
+      </table>
+    </section>
+  </main>
 
-<body>
-    
-</body>
+  <body></body>
 </html>
